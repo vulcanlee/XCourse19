@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Navigation.Xaml;assembly=Prism.Forms"
+             x:Class="XF3001.Views.MainPage"
+             Title="FlexLayout 的應用練習">
+
+    <Grid>
+        <ScrollView>
+            <FlexLayout
+                Wrap="Wrap"
+                Direction="Row"
+                AlignItems="Start"
+                AlignContent="Start"
+                JustifyContent="Center"
+                >
+                <BoxView
+                    Color="LightBlue"
+                    WidthRequest="120" HeightRequest="100"/>
+                <BoxView
+                    Color="LightCoral"
+                    WidthRequest="120" HeightRequest="100"/>
+                <BoxView
+                    Color="LightCyan"
+                    WidthRequest="120" HeightRequest="100"/>
+                <Label
+                    Text="Logo"
+                    FontSize="30"
+                    HorizontalTextAlignment="Center"
+                    WidthRequest="360"/>
+                <BoxView
+                    Color="LightGoldenrodYellow"
+                    WidthRequest="360" HeightRequest="200"/>
+                <BoxView
+                    Color="LightGray"
+                    WidthRequest="120" HeightRequest="100"/>
+                <BoxView
+                    Color="LightGreen"
+                    WidthRequest="120" HeightRequest="100"/>
+                <BoxView
+                    Color="LightPink"
+                    WidthRequest="120" HeightRequest="100"/>
+                <Button
+                    Text="  使用 ItemsSource 的用法  "
+                    Command="{prism:NavigateTo Name=ItemsSourcePage}"/>
+            </FlexLayout>
+        </ScrollView>
+    </Grid>
+
+</ContentPage>
