@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF2001.Views.MainPage"
+             Title="ACR User Dialogs 功能展示">
+
+    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+        <Label Text="Welcome to Xamarin Forms and Prism!" />
+        <Label Text="{Binding ResultMessage}"/>
+        <Button
+            Text="Progress 預設用法"
+            Command="{Binding Progress預設用法Command}"/>
+        <Button
+            Text="Progress 有取消"
+            Command="{Binding Progress有取消Command}"/>
+        <Button
+            Text="Progress 有取消/有進度"
+            Command="{Binding Progress有取消有進度Command}"/>
+        <Button
+            Text="Loading 預設用法"
+            Command="{Binding Loading預設用法Command}"/>
+        <Button
+            Text="Loading 有取消"
+            Command="{Binding Loading有取消Command}"/>
+    </StackLayout>
+
+</ContentPage>
