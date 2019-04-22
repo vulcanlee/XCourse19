@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF3002.Views.MainPage"
+             Title="CollectionView 的應用練習">
+
+    <StackLayout
+        >
+        <CollectionView
+            x:Name="cv"
+            ItemsSource="{Binding myItemList}"
+            SelectionMode="Single"
+            SelectedItem="{Binding SelectedItem, Mode=TwoWay}"
+            SelectionChangedCommand="{Binding SelectionChangedCommand}"
+            >
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout Orientation="Vertical" Span="2" />
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame BorderColor="LightGray" CornerRadius="3" HasShadow="False">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="70"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="150"/>
+                            </Grid.ColumnDefinitions>
+                            <Label
+                                HorizontalOptions="Start"
+                                Text="{Binding Name}"
+                                FontAttributes="Bold"
+                                FontSize="20"/>
+                            <Label
+                                HorizontalOptions="End" VerticalOptions="End"
+                                Text="{Binding OrderId}"
+                                TextColor="Red"
+                                FontSize="16"/>
+                        </Grid>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
+
+</ContentPage>
