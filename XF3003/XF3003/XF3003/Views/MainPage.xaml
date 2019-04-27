@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:LocalDataTemplates="clr-namespace:XF3003.DataTemplateSelectors"
+             x:Class="XF3003.Views.MainPage"
+             Title="StackLayout的ItemTemplateSelector 應用練習">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="labelTemplate">
+                <Grid>
+                    <Label Text="{Binding LabelText}"/>
+                </Grid>
+            </DataTemplate>
+            <DataTemplate x:Key="boxViewTemplate">
+                <Grid>
+                    <BoxView Color="LightPink"/>
+                </Grid>
+            </DataTemplate>
+            <DataTemplate x:Key="entryTemplate">
+                <Grid>
+                    <Entry Placeholder="{Binding LabelText}"/>
+                </Grid>
+            </DataTemplate>
+            <LocalDataTemplates:MyItemTemplateSelector x:Key="myItemTemplateSelector"
+                                                       LabelDataTemplate="{StaticResource labelTemplate}"
+                                                       BoxViewDataTemplate="{StaticResource boxViewTemplate}"
+                                                       EntryDataTemplate="{StaticResource entryTemplate}"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+        <StackLayout
+            Orientation="Vertical"
+            BindableLayout.ItemsSource="{Binding myItemList}"
+            BindableLayout.ItemTemplateSelector="{StaticResource myItemTemplateSelector}">
+        </StackLayout>
+    </Grid>
+</ContentPage>
