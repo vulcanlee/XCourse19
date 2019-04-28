@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF1010.Views.MainPage"
+             Title="命令綁定與參數">
+
+    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+        <Label Text="Welcome to Xamarin Forms and Prism!" />
+        <Button
+            Text="按鈕命令1"
+            Command="{Binding 按鈕命令Command}"
+            CommandParameter="這是按鈕命令1"/>
+        <Button
+            Text="按鈕命令2"
+            Command="{Binding 按鈕命令Command}"
+            CommandParameter="你按下了按鈕命令2"/>
+        <Label
+            Text="{Binding YourAnswer}"/>
+    </StackLayout>
+
+</ContentPage>
