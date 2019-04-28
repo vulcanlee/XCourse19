@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF1006.Views.MainPage"
+             Title="使用XAML來顯示這個頁面內容">
+
+    <StackLayout HorizontalOptions="Fill" VerticalOptions="CenterAndExpand">
+        <Entry
+            Placeholder="請輸入帳號"/>
+        <Label
+            Text="按下按鈕說明"/>
+        <BoxView
+            Color="Red"
+            HorizontalOptions="Center"
+            WidthRequest="250" HeightRequest="50"/>
+        <Button
+            Text="登入"/>
+    </StackLayout>
+
+</ContentPage>
