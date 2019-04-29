@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF1012.Views.MainPage"
+             Title="整數相加計算練習">
+
+    <StackLayout 
+        Margin="20,35"
+        HorizontalOptions="Fill" VerticalOptions="Start">
+        <Label Text="第 1 個整數" />
+        <Entry
+            Placeholder="請輸入整數數值"/>
+
+        <Label Text="第 2 個整數" />
+        <Entry
+            Placeholder="請輸入整數數值"/>
+        <Label Text="延遲計算秒數" />
+        <Entry
+            Placeholder="請輸入整數數值"/>
+        <Label Text="加總結果"
+               FontSize="24"
+               FontAttributes="Bold"
+               TextColor="LightPink"/>
+        <Button
+            Margin="15,0"
+            Text="加總計算"
+            BackgroundColor="LightBlue"/>
+    </StackLayout>
+
+</ContentPage>
