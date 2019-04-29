@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="XF2009.Views.DetailPage"
+             Title="Detail 明細頁面"
+             BackgroundColor="LightBlue">
+
+    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+        <Label Text="點選這按鈕，將會使用 Modal 模式，進入到編輯頁面" />
+        <Button
+            Text="Goto Edit Page"
+            Command="{Binding GotoEditPageCommand}"/>
+    </StackLayout>
+</ContentPage>

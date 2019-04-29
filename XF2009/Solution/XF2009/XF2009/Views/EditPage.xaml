@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="XF2009.Views.EditPage"
+             Title="Edit 編輯頁面"
+             BackgroundColor="LightGoldenrodYellow">
+
+    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+        <Label Text="點選這按鈕，需要直接首頁，跳過明細頁面" />
+        <Button
+            Text="回主畫面"
+            Command="{Binding GoBackPageCommand}"/>
+    </StackLayout>
+</ContentPage>

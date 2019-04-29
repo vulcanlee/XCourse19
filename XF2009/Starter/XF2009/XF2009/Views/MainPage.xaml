@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF2009.Views.MainPage"
+             Title="移除上一頁練習"
+             BackgroundColor="LightPink">
+
+    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+        <Label Text="點選這按鈕，將會進入到明細頁面" />
+        <Button
+            Text="Goto Detail Page"
+            Command="{Binding GotoDetailPageCommand}"/>
+    </StackLayout>
+
+</ContentPage>
