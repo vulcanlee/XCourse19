@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF2002.NextPage"
+             Title="下一頁">
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="這是第二頁"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Button
+                x:Name="btnBack"
+                Text="回到上一頁"
+                Clicked="BtnBack_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+    
+</ContentPage>

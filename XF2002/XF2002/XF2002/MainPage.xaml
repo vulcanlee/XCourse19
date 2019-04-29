@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XF2002"
+             x:Class="XF2002.MainPage"
+             Title="主頁面">
+
+    <StackLayout
+        HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+        <Button
+            x:Name="btnGoNext"
+            Text="Go Next"
+            Clicked="BtnGoNext_Clicked"/>
+    </StackLayout>
+
+</ContentPage>
