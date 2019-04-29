@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             xmlns:navigateion="clr-namespace:Prism.Navigation.Xaml;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="XF2029.Views.NextPage"
+             Title="下一頁">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="這是第二頁"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Button
+                Text="回到上一頁"
+                Command="{navigateion:GoBack}"/>
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>
