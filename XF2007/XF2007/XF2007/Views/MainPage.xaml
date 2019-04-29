@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF2007.Views.MainPage"
+             Title="主頁面">
+
+    <StackLayout
+        HorizontalOptions="Fill" VerticalOptions="CenterAndExpand">
+        <Entry
+            Placeholder="輸入姓名"
+            Text="{Binding Name}"/>
+        <Entry
+            Placeholder="輸入帳號"
+            Text="{Binding Account}"/>
+        <Button
+            Text="Go Next"
+            Command="{Binding GoNextCommand}"/>
+    </StackLayout>
+
+</ContentPage>
