@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF2012.Views.MainPage"
+             Title="Prism選擇項目之對話窗">
+
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <Label
+            Text="{Binding Title}"
+            FontSize="30"
+            TextColor="Pink"/>
+        <Label
+            Text="您選擇的項目"
+            Margin="0,0,0,50"/>
+        <Button
+            Text="選擇項目"
+            Command="{Binding 選擇項目Command}"/>
+        <Button
+            Text="訊息確認"
+            Command="{Binding 注意事項對話窗Command}"/>
+    </StackLayout>
+
+</ContentPage>
