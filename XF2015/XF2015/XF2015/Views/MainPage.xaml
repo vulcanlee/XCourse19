@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:behavior="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
+             x:Class="XF2015.Views.MainPage"
+             Title="事件2命令的動畫練習">
+
+    <StackLayout 
+        HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+        <Grid          
+            HorizontalOptions="Center" 
+            WidthRequest="100" HeightRequest="300"
+            >
+            <BoxView
+                HorizontalOptions="Start" VerticalOptions="Start"
+                WidthRequest="100" HeightRequest="300"
+                Color="Black"/>
+            <BoxView
+                HorizontalOptions="Start" VerticalOptions="Start"
+                WidthRequest="94" HeightRequest="294"
+                Margin="3"
+                Color="White"/>
+            <BoxView
+                HorizontalOptions="Start" VerticalOptions="End"
+                WidthRequest="94" HeightRequest="{Binding ContainerValue}"
+                Margin="3"
+                Color="LightBlue"/>
+        </Grid>
+
+        <Slider
+            WidthRequest="200"
+            Minimum="0" Maximum="100" 
+            Value="{Binding SliderValue}">
+            <Slider.Behaviors>
+                <behavior:EventToCommandBehavior
+                    EventName="ValueChanged"
+                    Command="{Binding ValueChangedCommand}"
+                    />
+            </Slider.Behaviors>
+        </Slider>
+    </StackLayout>
+
+</ContentPage>
