@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prismEvent="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
+             x:Class="XF2014.Views.MainPage"
+             Title="Prism 事件 2 命令">
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <Label Text="{Binding Title}" />
+        <Button
+            Text="請按下我1"
+            >
+            <!--
+            使用說明：http://prismlibrary.readthedocs.io/en/latest/Xamarin-Forms/6-EventToCommandBehavior/
+            事件名稱查詢：https://developer.xamarin.com/api/type/Xamarin.Forms.Button/
+            -->
+            <Button.Behaviors>
+                <prismEvent:EventToCommandBehavior
+                    EventName="Clicked"
+                    Command="{Binding BtnCommand}"
+                    CommandParameter="請按下我1"/>
+            </Button.Behaviors>
+        </Button>
+        <Button
+            Text="請按下我2"
+            >
+            <Button.Behaviors>
+                <prismEvent:EventToCommandBehavior
+                    EventName="Clicked"
+                    Command="{Binding BtnCommand}"
+                    CommandParameter="請按下我2"/>
+            </Button.Behaviors>
+        </Button>
+    </StackLayout>
+</ContentPage>
