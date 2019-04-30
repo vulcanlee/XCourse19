@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF2016.NextPage"
+             Title="下一頁"
+             BackgroundColor="Yellow">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label
+                x:Name="label"
+                Text="{Binding YourName}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
