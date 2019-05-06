@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+                  prism:ViewModelLocator.AutowireViewModel="True"
+                  x:Class="XF3006.Views.MDPage"
+                  MasterBehavior="Popover">
+
+    <MasterDetailPage.Master>
+        <ContentPage Title="Menu" Icon="hamburger.png">
+            <StackLayout Padding="20">
+                <!-- TODO: // Update the Layout and add some real menu items  -->
+                <Button Text="首頁" Command="{Binding NavigateCommand}" CommandParameter="MainPage" />
+                <Button Text="Page1" Command="{Binding NavigateCommand}" CommandParameter="Page1" />
+                <Button Text="Page2" Command="{Binding NavigateCommand}" CommandParameter="Page2" />
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+    
+</MasterDetailPage>
