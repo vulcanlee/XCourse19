@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF3027.Views.MainPage"
+             Title="導航工具列按鈕練習">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem 
+            Text="查詢" Order="Primary"
+            Command="{Binding TBCommand}" CommandParameter="查詢"/>
+        <ToolbarItem 
+            Text="子功能1" Order="Secondary"
+            Command="{Binding TBCommand}" CommandParameter="子功能1"/>
+        <ToolbarItem 
+            Text="子功能2" Order="Secondary"
+            Command="{Binding TBCommand}" CommandParameter="子功能2"/>
+        <ToolbarItem 
+            Text="子功能3" Order="Secondary"
+            Command="{Binding TBCommand}" CommandParameter="子功能3"/>
+    </ContentPage.ToolbarItems>
+
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <Label Text="{Binding Title}" />
+    </StackLayout>
+</ContentPage>
