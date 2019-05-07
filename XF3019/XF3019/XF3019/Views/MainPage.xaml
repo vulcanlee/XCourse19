@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF3019.Views.MainPage"
+             Title="單行文字輸入盒 Entry">
+
+    <!--這個練習專案，將會學習 Entry 這個控制項的各種不同用法
+    這包括了使用提示浮水印、指定使用軟體鍵盤格式、預設輸入文字、設定提示浮水印文字顏色、字體大小與格式-->
+
+    <StackLayout HorizontalOptions="Fill" VerticalOptions="Center"
+                 Margin="20,0">
+        <Label Text="一般" />
+        <Entry Placeholder="請輸入電話號碼" PlaceholderColor="Blue" Keyboard="Telephone"/>
+        <Label Text="浮水印與字體顏色" />
+        <Entry Placeholder="請輸入郵件信箱" Keyboard="Email"
+               Text="name@bar.com"
+               TextColor="Red"
+               PlaceholderColor="Blue"
+               />
+        <Label Text="字體設定" />
+        <Entry Placeholder="請輸入姓名" Text="王小明"
+               FontSize="24"
+               FontAttributes="Bold,Italic"
+               />
+    </StackLayout>
+
+</ContentPage>
