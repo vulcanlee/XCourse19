@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF3020.Views.MainPage"
+             xmlns:customControls="clr-namespace:XF3020.CustomControls"
+             Title="進階應用 Font Awesome">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <OnPlatform x:Key="FontAwesome" x:TypeArguments="x:String">
+                <On Platform="iOS" Value="fontawesome"/>
+                <On Platform="Android" Value="fontawesome.ttf"/>
+                <On Platform="UWP" Value="/fontawesome.ttf#FontAwesome"/>
+            </OnPlatform>
+
+            <!--這是舊的用法，請改用上述新的用法-->
+            <!--<OnPlatform x:Key="FontAwesome"
+               x:TypeArguments="x:String"
+               iOS="fontawesome"
+               Android="fontawesome"
+               WinPhone="/Assets/Fonts/fontawesome.ttf#FontAwesome" />-->
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <Label Text="&#xf164;" FontSize="40"
+                   HorizontalTextAlignment="Center"
+                   FontFamily="{StaticResource FontAwesome}"
+                   TextColor="#a64dff"
+                   />
+            <Label Text="{Binding Title}" FontSize="40"
+                   HorizontalTextAlignment="Center"
+                   TextColor="#a64dff"
+                   />
+            <StackLayout
+                Orientation="Vertical" HorizontalOptions="Center">
+                <customControls:FontAwesomeLabel
+                    Text="&#xf164;"
+                    TextColor="#ff3333"
+                    HorizontalOptions="Center"
+                    FontSize="60"
+                    Margin="0,0,20,0"
+                    />
+
+                <StackLayout
+                    Orientation="Horizontal">
+                    <customControls:FontAwesomeLabel
+                        Text="&#xf063;"
+                        TextColor="#bbbbbb"
+                        HorizontalOptions="Start"
+                        FontSize="20"
+                        Margin="0,0,20,0"
+                    />
+                    <Label
+                        Text="下載"
+                        TextColor="#bbbbbb"
+                        FontSize="20"/>
+                </StackLayout>
+
+                <StackLayout
+                    Margin="0,20,0,0"
+                    Orientation="Horizontal">
+                    <customControls:FontAwesomeLabel
+                        Text="&#xf236;"
+                        TextColor="#bbbbbb"
+                        HorizontalOptions="Start"
+                        FontSize="20"
+                        Margin="0,0,20,0"
+                    />
+                    <Label
+                        Text="請假"
+                        TextColor="#bbbbbb"
+                        FontSize="20"/>
+                </StackLayout>
+
+                <StackLayout
+                    Margin="0,20,0,0"
+                    Orientation="Horizontal">
+                    <customControls:FontAwesomeLabel
+                        Text="&#xf1fe;"
+                        TextColor="#bbbbbb"
+                        HorizontalOptions="Start"
+                        FontSize="20"
+                        Margin="0,0,20,0"
+                    />
+                    <Label
+                        Text="統計報表"
+                        TextColor="#bbbbbb"
+                        FontSize="20"/>
+                </StackLayout>
+
+            </StackLayout>
+
+        </StackLayout>
+    </Grid>
+
+</ContentPage>
