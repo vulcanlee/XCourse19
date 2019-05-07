@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF3012.Views.MainPage"
+             Title="動態顯示/隱藏控制項">
+    
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <Label Text="文字1" 
+                   IsVisible="{Binding Label1Visible}"/>
+            <Label Text="文字2" 
+                   IsVisible="{Binding Label2Visible}"/>
+        </StackLayout>
+        <Button
+          Text="{Binding Btn1Text}"
+          Command="{Binding Btn1Command}"/>
+        <Button
+          Text="{Binding Btn2Text}"
+          Command="{Binding Btn2Command}"/>
+    </StackLayout>
+</ContentPage>
