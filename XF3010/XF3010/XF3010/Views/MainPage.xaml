@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF3010.Views.MainPage"
+             Title="Grid 版面配置練習">
+
+    <Grid
+        >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <BoxView
+            Color="Pink"
+            Grid.Row="0" Grid.Column="0"
+            HorizontalOptions="Fill" VerticalOptions="Fill"/>
+        <BoxView
+            Color="Lime"
+            Grid.Row="0" Grid.Column="0"
+            HorizontalOptions="End" VerticalOptions="End"
+            WidthRequest="50" HeightRequest="50"/>
+
+        <BoxView
+            Color="Blue"
+            Grid.Row="1" Grid.Column="1"
+            HorizontalOptions="Fill" VerticalOptions="Fill"/>
+        <Label
+            Grid.Row="1" Grid.Column="1"
+            Text="Row=1&#x0a;Column=1"
+            FontSize="20"
+            HorizontalOptions="Center" VerticalOptions="Center"
+            TextColor="White"/>
+
+        <BoxView
+            Color="Green"
+            Grid.Row="3" Grid.Column="0"
+            Grid.ColumnSpan="2"
+            HorizontalOptions="Fill" VerticalOptions="Fill"/>
+        <Label
+            Grid.Row="3" Grid.Column="0"
+            Grid.ColumnSpan="2"
+            Text="ColumnSpan=2&#x0a;Row=2&#x0a;Column=0"
+            FontSize="{Binding CurrentFontSize}"
+            HorizontalOptions="Center"
+            TextColor="White"/>
+
+        <Button
+            Grid.Row="2" Grid.Column="0"
+            VerticalOptions="Center" HorizontalOptions="Center"
+            Text="大"
+            Command="{Binding ChangeFontSizeCommand}"
+            CommandParameter="1"/>
+
+        <Button
+            Grid.Row="2" Grid.Column="1"
+            VerticalOptions="Start" HorizontalOptions="End"
+            Margin="0,20,40,0"
+            Text="小"
+            Command="{Binding ChangeFontSizeCommand}"
+            CommandParameter="-1"/>
+
+    </Grid>
+</ContentPage>
