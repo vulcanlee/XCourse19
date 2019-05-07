@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<prism:PrismApplication xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Unity;assembly=Prism.Unity.Forms"
+             x:Class="XF3016.App">
+    
+    <Application.Resources>
+        <ResourceDictionary>
+            <ControlTemplate x:Key="MyPageTemplate">
+                <Grid
+                    RowSpacing="0" ColumnSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.1*" />
+                        <RowDefinition Height="0.8*" />
+                        <RowDefinition Height="0.1*" />
+                    </Grid.RowDefinitions>
+
+                    <BoxView 
+                        Color="LightBlue" />
+                    <Label 
+                        Margin="10,0,0,0"
+                        Text="Xamarin.Forms 跨平台應用程式" 
+                        TextColor="White" 
+                        VerticalOptions="Center"
+                        FontSize="20"/>
+
+                    <ContentPresenter 
+                        Grid.Row="1"  />
+
+                    <BoxView 
+                        Grid.Row="2" 
+                        Color="LightGreen" />
+                    <Label 
+                        Grid.Row="2" 
+                        Text="(c) 多奇數位創意有限公司 2019" 
+                        TextColor="White" 
+                        VerticalOptions="Center" HorizontalOptions="Center"/>
+                </Grid>
+            </ControlTemplate>
+        </ResourceDictionary>
+    </Application.Resources>
+</prism:PrismApplication>
