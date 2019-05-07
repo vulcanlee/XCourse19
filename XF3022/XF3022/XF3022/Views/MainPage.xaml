@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF3022.Views.MainPage"
+             xmlns:behavior="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
+             Title="可綁定Picker的連動練習">
+
+    <StackLayout
+        Margin="30,0"
+        HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+
+        <Picker
+            Title="請選擇主分類"
+            SelectedItem="{Binding SelectedMainCategory}"
+            ItemsSource="{Binding MainCategoryList}"
+            TextColor="Red"
+            >
+            <Picker.Behaviors>
+                <behavior:EventToCommandBehavior
+                    EventName="SelectedIndexChanged"
+                    Command="{Binding MainCategoryChangeCommand}"
+                    />
+            </Picker.Behaviors>
+        </Picker>
+        <Picker
+            Title="請選擇次分類"
+            SelectedItem="{Binding SelectedSubCategory}"
+            ItemsSource="{Binding SubCategoryList}"
+            TextColor="Red"
+            />
+
+        <StackLayout
+            Orientation="Horizontal">
+            <Label
+                Text="Picker1 is : "/>
+            <Label
+                Text="{Binding SelectedMainCategory}"/>
+        </StackLayout>
+        <StackLayout
+            Orientation="Horizontal">
+            <Label
+                Text="Picker1 is : "/>
+            <Label
+                Text="{Binding SelectedSubCategory}"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
