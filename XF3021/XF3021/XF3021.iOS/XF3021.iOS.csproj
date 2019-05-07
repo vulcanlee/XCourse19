@@ -96,6 +96,9 @@
     <ITunesArtwork Include="iTunesArtwork@1x.png" />
     <ITunesArtwork Include="iTunesArtwork@2x.png" />
     <ITunesArtwork Include="iTunesArtwork@3x.png" />
+    <BundleResource Include="Resources\iconize-fontawesome-solid.ttf" />
+    <BundleResource Include="Resources\iconize-fontawesome-brands.ttf" />
+    <BundleResource Include="Resources\iconize-fontawesome-regular.ttf" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\Contents.json">
