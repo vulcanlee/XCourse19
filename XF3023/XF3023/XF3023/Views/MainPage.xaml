@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF3023.Views.MainPage"
+             Title="Image 控制項之 Aspect 效果測試">
+    <ScrollView
+        >
+        <StackLayout HorizontalOptions="Fill" VerticalOptions="Center">
+            <Label Text="N/A"/>
+            <Image
+                HorizontalOptions="Center" VerticalOptions="Center"
+                WidthRequest="200" HeightRequest="200"
+                Source="xamarinfeatured.png"
+                BackgroundColor="Red"
+                />
+
+            <Label Text="AspectFill"/>
+            <Image
+                HorizontalOptions="Center" VerticalOptions="Center"
+                WidthRequest="200" HeightRequest="200"
+                Source="xamarinfeatured.png"
+                Aspect="AspectFill"
+                BackgroundColor="Red"
+                />
+
+            <Label Text="AspectFit"/>
+            <Image
+                HorizontalOptions="Center" VerticalOptions="Center"
+                WidthRequest="200" HeightRequest="200"
+                Source="xamarinfeatured.png"
+                Aspect="AspectFit"
+                BackgroundColor="Red"
+                />
+
+            <Label Text="Fill"/>
+            <Image
+                HorizontalOptions="Center" VerticalOptions="Center"
+                WidthRequest="200" HeightRequest="200"
+                Source="xamarinfeatured.png"
+                Aspect="Fill"
+                BackgroundColor="Red"
+                />
+
+            <BoxView
+                HorizontalOptions="Fill" VerticalOptions="Start"
+                HeightRequest="10"
+                Color="LightBlue"/>
+
+            <Label Text="N/A"/>
+            <Image
+                HorizontalOptions="Center" VerticalOptions="Center"
+                WidthRequest="200" HeightRequest="200"
+                Source="xamarinfeaturedV.png"
+                BackgroundColor="Red"
+                />
+
+            <Label Text="AspectFill"/>
+            <Image
+                HorizontalOptions="Center" VerticalOptions="Center"
+                WidthRequest="200" HeightRequest="200"
+                Source="xamarinfeaturedV.png"
+                Aspect="AspectFill"
+                BackgroundColor="Red"
+                />
+
+            <Label Text="AspectFit"/>
+            <Image
+                HorizontalOptions="Center" VerticalOptions="Center"
+                WidthRequest="200" HeightRequest="200"
+                Source="xamarinfeaturedV.png"
+                Aspect="AspectFit"
+                BackgroundColor="Red"
+                />
+
+            <Label Text="Fill"/>
+            <Image
+                HorizontalOptions="Center" VerticalOptions="Center"
+                WidthRequest="200" HeightRequest="200"
+                Source="xamarinfeaturedV.png"
+                Aspect="Fill"
+                BackgroundColor="Red"
+                />
+
+        </StackLayout>
+
+    </ScrollView>
+</ContentPage>
