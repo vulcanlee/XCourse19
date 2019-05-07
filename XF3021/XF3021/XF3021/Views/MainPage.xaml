@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF3021.Views.MainPage"
+             xmlns:iconize="clr-namespace:Plugin.Iconize;assembly=Plugin.Iconize"
+             Title="使用Iconize套件，顯示圖示圖片">
+
+    <Grid
+        Margin="30"
+        HorizontalOptions="Fill" VerticalOptions="Center"
+        >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <iconize:IconLabel
+            Grid.Row="0" Grid.Column="0"
+            HorizontalOptions="Center" VerticalOptions="Center"
+            FontSize="60"
+            Text="fas-address-book" TextColor="Blue" />
+        <Entry
+            Grid.Row="0" Grid.Column="1"
+            HorizontalOptions="Fill" VerticalOptions="Center"
+            Placeholder="請輸入帳號"/>
+
+        <iconize:IconLabel
+            Grid.Row="1" Grid.Column="0"
+            HorizontalOptions="Center" VerticalOptions="Center"
+            FontSize="60"
+            Text="fas-keyboard" TextColor="Blue" />
+        <Entry
+            Grid.Row="1" Grid.Column="1"
+            HorizontalOptions="Fill" VerticalOptions="Center"
+            Placeholder="請輸入密碼"/>
+
+    </Grid>
+</ContentPage>
