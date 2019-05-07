@@ -68,7 +68,7 @@
 |XF3014|RelativeLayout Layout||
 |XF3015|AbsoluteLayout Layout||
 |XF3016|控制項樣板之應用 讓頁面具有相同樣貌||
-|XF3017|FlexLayout 的應用練習||
+|XF3017|||
 |XF3018|使用 ContentView 組合新控制項||
 |XF3019|單行文字輸入盒 Entry||
 |XF3020|進階應用 Font Awesome||

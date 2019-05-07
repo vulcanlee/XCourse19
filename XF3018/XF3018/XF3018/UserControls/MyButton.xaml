@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF3018.UserControls.MyButton">
+    <ContentView.Content>
+        <Grid
+          RowSpacing="0"
+          ColumnSpacing="0">
+            <Grid.GestureRecognizers>
+                <!--這裡宣告了手勢操作發生的時候，所需要執行的命令-->
+                <TapGestureRecognizer
+                    Command="{Binding MyButtonCommand}"/>
+            </Grid.GestureRecognizers>
+            <!--背景區塊要填滿整個容器-->
+            <BoxView
+                HorizontalOptions="Fill" VerticalOptions="Fill"
+                Color="{Binding BackgroundColor}">
+            </BoxView>
+
+            <!--按鈕文字需要水平與垂直置中-->
+            <Label 
+                HorizontalOptions="Center" VerticalOptions="Center"
+                Text="{Binding ButtonLabel}"
+                FontSize="16"
+                TextColor="{Binding ButtonLabelColor}"
+                >
+            </Label>
+        </Grid>
+    </ContentView.Content>
+</ContentView>
