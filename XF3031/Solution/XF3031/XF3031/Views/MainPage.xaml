@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF3031.Views.MainPage"
+             xmlns:behavior="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
+             Title="工作清單">
+
+    <Grid
+        RowSpacing="0" ColumnSpacing="0">
+        <ListView
+            ItemsSource="{Binding MyTaskItemList}"
+            SelectedItem="{Binding MyTaskItemSelected}"
+            RowHeight="100"
+            >
+
+            <!--這裡設定當使用者點選某個項目，需要執行的命令
+            而使用者所點選的項目，可以透過 MyTaskItemSelected 物件得知-->
+
+            <!--這裡為什麼不使用 ItemSelected，而是使用 ItemTapped-->
+            <ListView.Behaviors>
+                <behavior:EventToCommandBehavior
+                    EventName="ItemTapped"
+                    Command="{Binding MyTaskItemSelectedCommand}"/>
+            </ListView.Behaviors>
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout
+                            Orientation="Vertical">
+                            <Label
+                                Text="{Binding MyTaskName}"
+                                FontSize="20"
+                                TextColor="Pink"/>
+                            <Label
+                                Text="{Binding MyTaskStatus}"
+                                FontSize="16"
+                                TextColor="Blue"/>
+                            <!--這裡使用了 StringFormat 來進行顯示格式轉換-->
+                            <Label
+                                Text="{Binding MyTaskDate, StringFormat='{0:yyyy-MM-dd}'}"
+                                FontSize="14"
+                                TextColor="Green"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+
+</ContentPage>
