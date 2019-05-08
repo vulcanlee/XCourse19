@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="XF3031.Views.TaskDetailPage"
+             Title="詳細資料">
+
+    <ScrollView
+        Orientation="Vertical"
+        >
+        <StackLayout
+            Spacing="0"
+            Orientation="Vertical"
+            HorizontalOptions="Fill" VerticalOptions="Fill"
+            >
+            <Label
+                Text="工作名稱"
+                TextColor="Black"
+                FontSize="20"/>
+            <Entry
+                Text="{Binding MyTaskItemSelected.MyTaskName}"/>
+
+            <Label
+                Text="狀態"
+                TextColor="Black"
+                FontSize="20"/>
+            <Entry
+                Text="{Binding MyTaskItemSelected.MyTaskStatus}"/>
+
+            <Label
+                Text="指派日期"
+                TextColor="Black"
+                FontSize="20"/>
+            <DatePicker
+                Date="{Binding MyTaskItemSelected.MyTaskDate}"
+                Format="yyyy.MM.dd"/>
+
+            <Grid
+                RowSpacing="0" ColumnSpacing="0"
+                >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button
+                    Grid.Column="0" Grid.ColumnSpan="2"
+                    Text="儲存"
+                    BackgroundColor="Red"
+                    TextColor="White"
+                    Command="{Binding SaveCommand}"
+                    IsVisible="{Binding AddMode}"/>
+                <Button
+                    Grid.Column="0"
+                    Text="刪除"
+                    BackgroundColor="Blue"
+                    TextColor="White"
+                    Command="{Binding DeleteCommand}"
+                    IsVisible="{Binding EditMode}"/>
+                <Button
+                    Grid.Column="1"
+                    Text="儲存"
+                    BackgroundColor="Red"
+                    TextColor="White"
+                    Command="{Binding SaveCommand}"
+                    IsVisible="{Binding EditMode}"/>
+            </Grid>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

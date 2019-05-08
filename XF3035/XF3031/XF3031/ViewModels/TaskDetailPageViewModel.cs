@@ -1,0 +1,81 @@
+﻿using Prism.Commands;
+using Prism.Mvvm;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace XF3031.ViewModels
+{
+    using System.ComponentModel;
+    using Prism.Events;
+    using Prism.Navigation;
+    using Prism.Services;
+    using XF3031.Models;
+
+    public class TaskDetailPageViewModel : INotifyPropertyChanged, INavigationAware
+    {
+        public event PropertyChangedEventHandler PropertyChanged;
+        public MyTaskItem MyTaskItemSelected { get; set; }
+        public string TaskMode { get; set; }
+        public DelegateCommand DeleteCommand { get; set; }
+        public DelegateCommand SaveCommand { get; set; }
+        public bool AddMode { get; set; }
+        public bool EditMode { get; set; }
+        private readonly INavigationService navigationService;
+
+        public TaskDetailPageViewModel(INavigationService navigationService)
+        {
+            this.navigationService = navigationService;
+            DeleteCommand = new DelegateCommand(() =>
+            {
+                NavigationParameters fooPara = new NavigationParameters();
+                fooPara.Add("MyTaskItem", MyTaskItemSelected);
+                fooPara.Add("Mode", "Delete");
+                navigationService.GoBackAsync(fooPara);
+            });
+            SaveCommand = new DelegateCommand(() =>
+            {
+                NavigationParameters fooPara = new NavigationParameters();
+                fooPara.Add("MyTaskItem", MyTaskItemSelected);
+                if (TaskMode == "Edit")
+                {
+                    fooPara.Add("Mode", "Update");
+                }
+                else
+                {
+                    fooPara.Add("Mode", "Add");                }
+
+                navigationService.GoBackAsync(fooPara);
+            });
+        }
+
+        public void OnNavigatedFrom(INavigationParameters parameters)
+        {
+        }
+
+        public void OnNavigatedTo(INavigationParameters parameters)
+        {
+            if (parameters.ContainsKey("Mode"))
+            {
+                TaskMode = parameters.GetValue<string>("Mode");
+                if (TaskMode == "Edit")
+                {
+                    MyTaskItemSelected = parameters.GetValue<MyTaskItem>("MyTaskItem");
+                    AddMode = false;
+                    EditMode = true;
+                }
+                else
+                {
+                    MyTaskItemSelected = new MyTaskItem();
+                    AddMode = true;
+                    EditMode = false;
+                }
+            }
+        }
+
+        public void OnNavigatingTo(INavigationParameters parameters)
+        {
+        }
+
+    }
+}
