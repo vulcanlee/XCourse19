@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF3025.Views.MainPage"
+             xmlns:LocalImage="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             Title="顯示具有圓形遮罩 Mask 的圖片">
+
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <Label Text="{Binding Title}" />
+        <Image
+            Source="platformImage.jpg"
+            Aspect="AspectFill"
+            WidthRequest="200"
+            HeightRequest="200"
+            />
+        <LocalImage:CircleImage
+            Source="platformImage.jpg"
+            Aspect="AspectFill"
+            BorderColor="Green"
+            BorderThickness="5"
+            BackgroundColor="Transparent"
+            WidthRequest="200"
+            HeightRequest="200"
+            />
+    </StackLayout>
+</ContentPage>
