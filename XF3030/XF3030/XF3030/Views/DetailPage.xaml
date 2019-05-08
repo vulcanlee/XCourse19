@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="XF3030.Views.DetailPage"
+             Title="資料明細">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="打電話" Command="{Binding MakePhoneCallCommand}"/>
+        <ToolbarItem Text="開網頁" Command="{Binding OpenWebCommand}"/>
+        <ToolbarItem Text="寫郵件" Command="{Binding SendMailCommand}"/>
+        <ToolbarItem Text="看位置" Command="{Binding ShowMapCommand}"/>
+    </ContentPage.ToolbarItems>
+
+    <ScrollView>
+        <StackLayout>
+            <Label FontSize="12" Text="創業空間名稱"/>
+            <Label FontSize="18" Text="{Binding OpenSpaceItemSelected.創業空間名稱}"/>
+
+            <Label FontSize="12" Text="所屬單位" Margin="0,10,0,0"/>
+            <Label FontSize="18" Text="{Binding OpenSpaceItemSelected.所屬單位}"/>
+
+            <Label FontSize="12" Text="創業空間類型" Margin="0,10,0,0"/>
+            <Label FontSize="18" Text="{Binding OpenSpaceItemSelected.創業空間類型}"/>
+
+            <Label FontSize="12" Text="招募團隊類型" Margin="0,10,0,0"/>
+            <Label FontSize="18" Text="{Binding OpenSpaceItemSelected.招募團隊類型}"/>
+
+            <Label FontSize="12" Text="空間用途" Margin="0,10,0,0"/>
+            <Label FontSize="18" Text="{Binding OpenSpaceItemSelected.空間用途}"/>
+
+            <Label FontSize="12" Text="空間是否出租" Margin="0,10,0,0"/>
+            <Label FontSize="18" Text="{Binding OpenSpaceItemSelected.空間是否出租}"/>
+
+            <Label FontSize="12" Text="縣市" Margin="0,10,0,0"/>
+            <Label FontSize="18" Text="{Binding OpenSpaceItemSelected.縣市city_area}"/>
+
+            <Label FontSize="12" Text="地址" Margin="0,10,0,0"/>
+            <Label FontSize="18" Text="{Binding OpenSpaceItemSelected.address}"/>
+
+            <Label FontSize="12" Text="空間" Margin="0,10,0,0"/>
+            <Image 
+                WidthRequest="300" HeightRequest="300" Aspect="AspectFit"
+                Source="{Binding OpenSpaceItemSelected.空間主照片}"/>
+
+            <Label FontSize="12" Text="詳細照片" Margin="0,10,0,0"/>
+            <Image 
+                WidthRequest="300" HeightRequest="300" Aspect="AspectFit"
+                Source="{Binding OpenSpaceItemSelected.詳細照片}"/>
+
+            <Label FontSize="12" Text="空間資訊" Margin="0,10,0,0"/>
+            <WebView 
+                WidthRequest="300" HeightRequest="500" 
+                Source="{Binding HtmlSource}"/>
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

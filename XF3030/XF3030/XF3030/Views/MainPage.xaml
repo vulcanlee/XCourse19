@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF3030.Views.MainPage"
+             xmlns:behavior="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
+             Title="創業空間資料">
+
+    <Grid>
+        <ListView
+            ItemsSource="{Binding OpenSpaceItems}"
+            SelectedItem="{Binding OpenSpaceItemSelected}"
+            HasUnevenRows="True"
+            >
+            <ListView.Behaviors>
+                <behavior:EventToCommandBehavior
+                    EventName="ItemSelected" Command="{Binding ItemClickCommand}"/>
+            </ListView.Behaviors>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid
+                            Margin="0,5"
+                            >
+                            <BoxView Color="LightBlue"/>
+                            <StackLayout>
+                                <Label Text="{Binding 創業空間名稱}"/>
+                                <Label Text="{Binding 所屬單位}"/>
+                                <Label Text="{Binding 縣市city_area}"/>
+                                <Label Text="{Binding 價格方案}"/>
+                            </StackLayout>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+
+</ContentPage>
