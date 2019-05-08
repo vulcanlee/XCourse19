@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF3038.Views.MainPage"
+             xmlns:behavior="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
+             Title="ListView 延遲載入">
+    <Grid
+      >
+        <ListView
+            ItemsSource="{Binding MyDatas}"
+            SelectedItem="{Binding SelectedMyData}"
+            HasUnevenRows="True"
+            >
+            <ListView.Behaviors>
+                <behavior:EventToCommandBehavior
+                    EventName="ItemAppearing"
+                    Command="{Binding ItemAppearingCommand}"
+                    EventArgsParameterPath="Item"/>
+            </ListView.Behaviors>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label Text="{Binding ID}"/>
+                            <Label Text="{Binding Name}" FontSize="30"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <!--當正在讀取資料的時候，會顯示遮罩-->
+        <Grid
+            IsVisible="{Binding Loading}"
+            >
+            <BoxView
+                Color="Black"
+                Opacity="0.8"
+                />
+            <Label Text="請稍後..."
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   TextColor="White"
+                   FontSize="30"/>
+        </Grid>
+    </Grid>
+</ContentPage>

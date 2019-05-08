@@ -1,0 +1,8 @@
+﻿<Application
+    x:Class="XF3038.UWP.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:XF3038.UWP"
+    RequestedTheme="Light">
+
+</Application>
