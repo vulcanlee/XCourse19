@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF4033.Views.MainPage"
+             Title="用附加屬性來查詢綁定內容">
+    <StackLayout HorizontalOptions="Fill" VerticalOptions="Fill">
+        <Label Text="{Binding Title}"/>
+        <StackLayout
+            Orientation="Horizontal">
+            <Label
+                Text="取得 Label 的 BindingContext"/>
+            <Switch
+                IsToggled="{Binding GetLabelBC}"/>
+        </StackLayout>
+        <StackLayout
+            Orientation="Horizontal">
+            <Label
+                Text="取得 Item 的 BindingContext"/>
+            <Switch
+                IsToggled="{Binding GetViewCellBC}"/>
+        </StackLayout>
+
+        <ListView
+            ItemsSource="{Binding ProductItemList}"
+            HasUnevenRows="True"
+            >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label Text="{Binding Name}"
+                                   FontSize="20"
+                                   TextColor="Black"/>
+                            <Label Text="{Binding Description}"
+                                   FontSize="16"
+                                   TextColor="Pink"/>
+                            <Button Text="變換名稱"
+                                    Command="{Binding ChangeNameCommand}"
+                                    CommandParameter="{Binding }"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>
