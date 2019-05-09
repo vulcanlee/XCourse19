@@ -52,6 +52,8 @@
 
 ## Xamarin.Forms 2019 (3) XAML
 
+|專案名稱|專案說明|備註|
+|-|-|-|
 |XF3001|FlexLayout 的應用練習||
 |XF3002|CollectionView 的應用練習||
 |XF3003|Layout<T> 動態顯示內容的應用練習||
@@ -113,17 +115,50 @@
 |XF3059|||
 |XF306|||
 ||||
-||||
-||||
 
 ## Xamarin.Forms 2019 (4) 進階 XAML 技巧
 
-||||
-||||
-||||
-||||
-||||
-||||
+|專案名稱|專案說明|備註|
+|-|-|-|
+|XF4001|XAML 設計方法說明 進階設計準則||
+|XF4002|XAML 靜態與動態資源的使用||
+|XF4003|XAML 靜態資源的使用||
+|XF4004|XAML 動態資源的使用||
+|XF4005|XAML 資源字典的繼承說明||
+|XF4006|XAML 資源字典項目與繼承||
+|XF4007|XAML 的 樣式 style 應用||
+|XF4008|XAML 的 樣式 style 練習||
+|XF4009|儲存帳密的資源/樣式綜合演練||
+|XF4010|x:Array 使用範例||
+|XF4011|數值轉換器 Value Converter||
+|XF4012|數值轉換器 ConvertBack||
+|XF4013|延伸標記之客制擴充 IMarkupExtension||
+|XF4014|XAML 轉換 (Transforms)||
+|XF4015|可綁定屬性 Bindable Properties||
+|XF4016|附加屬性 Attached Properties||
+|XF4017|客製化控制項Custom Control||
+|XF4018|Xamarin.Forms Behaviors 應用||
+|XF4019|附加行為 Attached Behaviors 應用||
+|XF4020|聊天室 DataTemplateSelector||
+|XF4021|觸發 Trigger||
+|XF4022|使用者登入與觸發應用||
+|XF4023|手勢操作 GestureRecognizer||
+|XF4024|擴充其他手勢操作||
+|XF4025|文字與圖片點選之手勢命令||
+|XF4026|手勢移動區塊操作GestureRecognizer||
+|XF4027|動畫 Animations||
+|XF4028|使用者輸入資料驗證應用||
+|XF4029|客製專屬平台的控制項視覺 - 進行 Entry 控制項客製化(Renderer)||
+|XF4030|使用者控制項 User Control||
+|XF4031|客製+使用者控制項綜合應用||
+|XF4032|客製按鈕面板應用 1||
+|XF4033|||
+|XF4034|||
+|XF4035|||
+|XF4036|||
+|XF4037|||
+|XF4038|||
+|XF4039|||
 ||||
 
 ## Xamarin.Forms 2019 (5) 核心服務、生命週期與部署
