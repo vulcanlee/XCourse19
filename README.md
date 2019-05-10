@@ -134,7 +134,7 @@
 |XF4012|範例體驗 ： 體驗數值轉換器 ConvertBack 運作||
 |XF4013|延伸標記 IMarkupExtension 設計用法||
 |XF4014|範例體驗 ： XAML 轉換 (Transforms)||
-|XF4015|可綁定屬性 Bindable Properties||
+|XF4015|練習情境 : 可綁定屬性 Bindable Properties||
 |XF4016|附加屬性 Attached Properties||
 |XF4017|客製化控制項Custom Control||
 |XF4018|Xamarin.Forms Behaviors 應用||

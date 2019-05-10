@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF4015.Views.MainPage"
+             xmlns:customControl="clr-namespace:XF4015.CustomControls"
+             Title="自訂綁定屬性 Bindable Property">
+    
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Start">
+        <!--要使用 AwesomeEntry 這個客製控制項，需要在 ContentPage 中，
+        加入一個新的命名空間 xmlns:customControl="clr-namespace:XF4015.CustomControls"
+        當要使用這個客製化控制項的時候，需要將命名空間名稱放在控制項名稱前。-->
+
+        <!--現在，先建立的客製控制項，擁有了 EntryType 屬性，透過該屬性，可以產生預設浮水印文字-->
+        <customControl:AwesomeEntry EntryType="Email" />
+        <customControl:AwesomeEntry EntryType="Phone" />
+        <customControl:AwesomeEntry EntryType="Number" />
+    </StackLayout>
+</ContentPage>
