@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF4004.Views.MainPage"
+             xmlns:local="clr-namespace:XF4004"
+             Title="XAML 動態資源的使用">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="StaticResourceColor">#ff6600</Color>
+            <x:Double x:Key="StaticResourcefontSize">24</x:Double>
+            <Color x:Key="DynamicResourceColor">#ccffcc</Color>
+            <x:Double x:Key="DynamicResourcefontSize">32</x:Double>
+            <LayoutOptions x:Key="Center">Center</LayoutOptions>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <Label Text="{Binding Title}" />
+        <Label Text="靜態資源"
+               TextColor="{DynamicResource StaticResourceColor}"
+               FontSize="{DynamicResource StaticResourcefontSize}"/>
+        <Label Text="動態資源"
+               TextColor="{DynamicResource DynamicResourceColor}"
+               FontSize="{DynamicResource DynamicResourcefontSize}"/>
+        <Label Text="靜態屬性"
+               TextColor="{Static local:MyClass.StaticMember}"
+               FontSize="{x:Static local:MyClass.StaticSize}"/>
+
+        <BoxView
+            Margin="0,15"
+            Color="Transparent"
+            HeightRequest="1" VerticalOptions="Start" HorizontalOptions="Fill"/>
+
+        <Button x:Name="btnDynamicRes" Text="變更動態" Clicked="btnDynamicRes_Clicked"/>
+        <Button x:Name="btnStaticObject" Text="變更靜態屬性" Clicked="btnStaticObject_Clicked"/>
+        <Button Text="Reload" Command="{Binding ReloadCommand}"/>
+    </StackLayout>
+</ContentPage>
