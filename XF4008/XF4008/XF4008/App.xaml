@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<prism:PrismApplication xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Unity;assembly=Prism.Unity.Forms"
+             x:Class="XF4008.App">
+	<Application.Resources>
+
+		<!-- Application resource dictionary -->
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="TextColor">Green</Setter>
+                <Setter Property="FontSize" Value="30"/>
+            </Style>
+
+            <Style x:Key="BlueLabel" TargetType="Label">
+                <Setter Property="TextColor" Value="Blue"></Setter>
+                <Setter Property="FontSize">20</Setter>
+            </Style>
+
+            <Style x:Key="YellowLabel" TargetType="Label">
+                <Setter Property="TextColor" Value="Yellow"></Setter>
+                <Setter Property="FontSize">16</Setter>
+            </Style>
+
+            <Style x:Key="GreenButton" TargetType="Button">
+                <Setter Property="BackgroundColor">Green</Setter>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</prism:PrismApplication>

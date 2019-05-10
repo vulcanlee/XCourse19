@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF4009.Views.MainPage"
+             Title="儲存帳密的資源/樣式綜合演練"
+             BackgroundColor="{StaticResource LoginBackgroundColor}"
+             >
+    <StackLayout HorizontalOptions="Fill" VerticalOptions="Center"
+                 Margin="15,0">
+        <Label Text="帳號" />
+        <Entry />
+        <Label Text="帳號" />
+        <Entry TextColor="Red" IsPassword="True" />
+
+        <Grid
+            Margin="0,40,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button
+                Grid.Column="1"
+                Text="儲存"
+                Style="{StaticResource MyButtonStyle}"/>
+
+            <Button
+                Grid.Column="0"
+                Text="取消"
+                BackgroundColor="Red"
+                TextColor="White"
+                Style="{StaticResource MyButtonStyle}"
+                />
+        </Grid>
+    </StackLayout>
+</ContentPage>

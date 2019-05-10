@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF4008.Views.MainPage"
+             Title="XAML 的 樣式 style 練習">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="TextColor">Orange</Setter>
+                <Setter Property="FontSize" Value="30"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <!--為什麼這裡設定要顯示綠色 Label，卻不會顯示出橘色文字-->
+        <Label Text="一般文字(隱含)" />
+        <Label Text="樣式文字(明確)" Style="{StaticResource BlueLabel}" />
+        <!--為什麼這裡指定黃色樣式，但是，卻出現粉紅色字體-->
+        <Label Text="樣式文字+屬性" TextColor="Pink"/>
+        <Label Text="樣式文字+屬性" Style="{StaticResource YellowLabel}" TextColor="Pink" FontSize="50"/>
+
+        <Button
+            Margin="0,15"
+            Text="一般按鈕"/>
+        <Button
+            Style="{StaticResource GreenButton}"
+            Text="樣式按鈕"/>
+    </StackLayout>
+</ContentPage>
