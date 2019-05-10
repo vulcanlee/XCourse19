@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF4011.Views.MainPage"
+             xmlns:converter="clr-namespace:XF4011.Converters"
+             Title="數值轉換器 Value Converter">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converter:StringToColorConverter x:Key="StringToColorConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <Label Text="{Binding Title}" />
+        <Entry
+            Text="{Binding YourAnswer}"/>
+        <BoxView
+            Color="{Binding YourAnswer, Converter={StaticResource StringToColorConverter}}"
+            WidthRequest="100"
+            HeightRequest="100"/>
+    </StackLayout>
+</ContentPage>
