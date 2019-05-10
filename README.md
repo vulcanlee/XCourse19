@@ -131,7 +131,7 @@
 |XF4009|練習情境 : 儲存帳密的資源/樣式綜合演練||
 |XF4010|練習情境 : x:Array 使用範例||
 |XF4011|練習情境 : 數值轉換器 Value Converter||
-|XF4012|練習情境 : 數值轉換器 ConvertBack||
+|XF4012|範例： 體驗數值轉換器 ConvertBack 運作||
 |XF4013|延伸標記之客制擴充 IMarkupExtension||
 |XF4014|XAML 轉換 (Transforms)||
 |XF4015|可綁定屬性 Bindable Properties||

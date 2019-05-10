@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF4012.Views.MainPage"
+             xmlns:converter="clr-namespace:XF4012.Converters"
+             Title="數值轉換器 ConvertBack">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converter:NumberToAlphabetConverter x:Key="NumberToAlphabetConverter"/>
+        </ResourceDictionary>
+
+    </ContentPage.Resources>
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Start">
+        <Entry
+            Text="{Binding YourAnswer, Converter={StaticResource NumberToAlphabetConverter}}"
+            HorizontalOptions="Fill" VerticalOptions="Start"/>
+        <Label
+            Text="{Binding YourAnswer, StringFormat='ViewModel 內的值為 {0}'}"/>
+        <Button
+            Text="取得內容"
+            Command="{Binding AddAnswerCommand}"/>
+    </StackLayout>
+</ContentPage>
