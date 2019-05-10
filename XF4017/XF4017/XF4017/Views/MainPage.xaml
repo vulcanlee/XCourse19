@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF4017.Views.MainPage"
+             xmlns:local="clr-namespace:XF4017.CustomControls"
+             Title="客製化控制項Custom Control">
+
+    <StackLayout HorizontalOptions="Fill" VerticalOptions="Center">
+        <Label Text="{Binding Title}" HorizontalOptions="Center"/>
+        <!--https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/-->
+
+        <!--在這裡，透過新建立的命名空間，指向到我們自行建立的 Picker 客製控制項，這樣，就可以使用有資料綁定功能的 Picker 控制項了-->
+        <local:BindablePicker 
+            ItemsSource="{Binding PickerVM}"
+            HorizontalOptions="Fill"
+            HeightRequest="34"
+            SelectedItem="{Binding PickerSelectedTitle}"
+            SelectedItemCommand="{Binding SelectedIndexChangedCommand}">
+        </local:BindablePicker>
+
+        <Label Text="{Binding PickerSelectedTitle}" HorizontalOptions="Center"/>
+    </StackLayout>
+</ContentPage>

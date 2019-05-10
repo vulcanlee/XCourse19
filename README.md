@@ -136,7 +136,7 @@
 |XF4014|範例體驗 ： XAML 轉換 (Transforms)||
 |XF4015|練習情境 : 可綁定屬性 Bindable Properties||
 |XF4016|練習情境 : 附加屬性 Attached Properties||
-|XF4017|客製化控制項Custom Control||
+|XF4017|範例體驗 : 客製化控制項Custom Control||
 |XF4018|Xamarin.Forms Behaviors 應用||
 |XF4019|附加行為 Attached Behaviors 應用||
 |XF4020|聊天室 DataTemplateSelector||
