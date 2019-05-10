@@ -138,11 +138,11 @@
 |XF4016|練習情境 : 附加屬性 Attached Properties||
 |XF4017|範例體驗 : 客製化控制項Custom Control||
 |XF4018|練習情境 : Xamarin.Forms Behaviors 應用||
-|XF4019|附加行為 Attached Behaviors 應用||
-|XF4020|聊天室 DataTemplateSelector||
-|XF4021|觸發 Trigger||
+|XF4019|練習情境 : 附加行為 Attached Behaviors 應用||
+|XF4020|練習情境 : 聊天室 DataTemplateSelector||
+|XF4021|範例體驗 : 觸發 Trigger||
 |XF4022|使用者登入與觸發應用||
-|XF4023|手勢操作 GestureRecognizer||
+|XF4023|範例體驗 : 手勢操作 GestureRecognizer||
 |XF4024|擴充其他手勢操作||
 |XF4025|文字與圖片點選之手勢命令||
 |XF4026|手勢移動區塊操作GestureRecognizer||
