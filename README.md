@@ -129,7 +129,7 @@
 |XF4007|範例： XAML 的 樣式 style 應用(資源合併)||
 |XF4008|練習情境 : XAML 的 樣式 style 練習||
 |XF4009|練習情境 : 儲存帳密的資源/樣式綜合演練||
-|XF4010|x:Array 使用範例||
+|XF4010|練習情境 : x:Array 使用範例||
 |XF4011|數值轉換器 Value Converter||
 |XF4012|數值轉換器 ConvertBack||
 |XF4013|延伸標記之客制擴充 IMarkupExtension||
