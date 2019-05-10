@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF4006.Views.MainPage"
+             Title="XAML 資源字典項目與繼承">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <!--頁面層級的資料資源-->
+            <Color x:Key="CustTextByContentPageColor">#FF6A00</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <Label Text="App層級資源" FontSize="30" TextColor="{StaticResource CustTextColor}" />
+        <Label Text="頁面層級資源" FontSize="30" TextColor="{StaticResource CustTextByContentPageColor}" />
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <StackLayout.Resources>
+                <ResourceDictionary>
+                    <!--StackLayout的資料資源-->
+                    <Color x:Key="CustTextColor">Blue</Color>
+                </ResourceDictionary>
+            </StackLayout.Resources>
+
+            <Label Text="StackLayout資源" FontSize="30" TextColor="{StaticResource CustTextColor}" />
+            <Label Text="Label 資源" FontSize="30" TextColor="{StaticResource CustTextColor}">
+                <Label.Resources>
+                    <ResourceDictionary>
+                        <!--Label的資料資源-->
+                        <Color x:Key="CustTextColor">Pink</Color>
+                    </ResourceDictionary>
+                </Label.Resources>
+            </Label>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
