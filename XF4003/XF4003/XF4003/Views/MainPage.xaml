@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF4003.Views.MainPage"
+             xmlns:local="clr-namespace:XF4003"
+             Title="XAML 靜態資源的使用">
+
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <Label Text="{Binding Title}" />
+        <Label Text="正常文字"/>
+        <Label Text="套用靜態資源"
+               TextColor="{StaticResource GlobaltextColor}"
+               FontSize="{StaticResource GlobalfontSize}"/>
+        <Label Text="套用靜態屬性"
+               TextColor="{Static local:MyClass.StaticMember}"
+               FontSize="{x:Static local:MyClass.StaticSize}"/>
+
+        <BoxView
+            Margin="0,15"
+            Color="Transparent"
+            HeightRequest="1" VerticalOptions="Start" HorizontalOptions="Fill"/>
+
+        <Button Text="正常按鈕"/>
+        <Button Text="樣式按鈕"
+                BackgroundColor="{StaticResource GlobalbackgroundColor}"
+                />
+    </StackLayout>
+</ContentPage>
