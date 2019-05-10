@@ -121,19 +121,19 @@
 |專案名稱|專案說明|備註|
 |-|-|-|
 |XF4001|XAML 設計方法說明 進階設計準則 使用者控制項的範例||
-|XF4002|範例：XAML 靜態與動態資源的使用||
+|XF4002|範例體驗 ：XAML 靜態與動態資源的使用||
 |XF4003|練習情境 : XAML 靜態資源的使用||
 |XF4004|XAML 動態資源的使用||
-|XF4005|範例： XAML 資源字典的繼承說明||
+|XF4005|範例體驗 ： XAML 資源字典的繼承說明||
 |XF4006|練習情境 : XAML 資源字典項目與繼承||
-|XF4007|範例： XAML 的 樣式 style 應用(資源合併)||
+|XF4007|範例體驗 ： XAML 的 樣式 style 應用(資源合併)||
 |XF4008|練習情境 : XAML 的 樣式 style 練習||
 |XF4009|練習情境 : 儲存帳密的資源/樣式綜合演練||
 |XF4010|練習情境 : x:Array 使用範例||
 |XF4011|練習情境 : 數值轉換器 Value Converter||
-|XF4012|範例： 體驗數值轉換器 ConvertBack 運作||
-|XF4013|延伸標記之客制擴充 IMarkupExtension||
-|XF4014|XAML 轉換 (Transforms)||
+|XF4012|範例體驗 ： 體驗數值轉換器 ConvertBack 運作||
+|XF4013|延伸標記 IMarkupExtension 設計用法||
+|XF4014|範例體驗 ： XAML 轉換 (Transforms)||
 |XF4015|可綁定屬性 Bindable Properties||
 |XF4016|附加屬性 Attached Properties||
 |XF4017|客製化控制項Custom Control||
