@@ -143,6 +143,7 @@
 |XF4021|範例體驗 : 觸發 Trigger||
 |XF4022|使用者登入與觸發應用||
 |XF4023|範例體驗 : 手勢操作 GestureRecognizer||
+|XF4024|範例體驗 : 行為 Behavior使用附加行為的定義行為||
 |XF4025|文字與圖片點選之手勢命令||
 |XF4026|手勢移動區塊操作GestureRecognizer||
 |XF4027|範例體驗 : 動畫 Animations||
