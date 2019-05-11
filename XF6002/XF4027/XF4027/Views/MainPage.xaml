@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF4027.Views.MainPage"
+             Title="動畫 Animations"
+             BackgroundColor="Yellow">
+
+    <Grid
+        HorizontalOptions="Fill" VerticalOptions="Fill"
+        >
+        <Grid>
+            <Button x:Name="button"
+                    HorizontalOptions="Center" VerticalOptions="Center"
+                    Text="下一頁" Command="{Binding 下一頁Command}" />
+        </Grid>
+        <StackLayout 
+            Orientation="Horizontal"
+            Margin="10,20"
+            HorizontalOptions="Center" VerticalOptions="End">
+            <Button Text="各自動畫" Command="{Binding 各自動畫Command}" />
+            <Button Text="串接動畫" Command="{Binding 串接動畫Command}" />
+        </StackLayout>
+    </Grid>
+
+</ContentPage>
