@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF5004.UserControls.CustDialogUserControl">
+
+    <!--這是輸入帳號與密碼的使用者控制項-->
+    <!--一般來說，使用者控制項，我們大多會使用 ContentView 作為根項目
+    這個使用者控制項有相當多的項目屬性，都使用到了資料繫結，
+    而資料繫結的來源，將會設定到該頁面的 ViewModel內-->
+
+    <Grid
+        HorizontalOptions="Fill" VerticalOptions="Fill"
+        >
+        <!--透過層層重疊技巧，讓您的頁面更加豐富-->
+
+        <!--這裡顏色是具有半透明的效果-->
+        <BoxView
+            BackgroundColor="#BB000000"
+            />
+        <BoxView
+            BackgroundColor="#FFFFFFFF"
+            Margin="20,70"
+            />
+        <StackLayout
+            Margin="40,80"
+            HorizontalOptions="Fill" VerticalOptions="Start"
+            >
+            <Label
+                Text="{Binding 客製化使用者對話窗ViewModel.對話窗主題}"
+                TextColor="#000000"
+                FontSize="30"
+                HorizontalOptions="Center"
+                Margin="0,40,0,20"
+                />
+            <Label
+                Text="{Binding 客製化使用者對話窗ViewModel.對話窗訊息}"
+                TextColor="#000000"
+                Margin="20,20,20,30"
+                FontSize="18"
+                HorizontalTextAlignment="Center"
+                HorizontalOptions="Center"
+                />
+            <Label Text="帳號" />
+            <Entry
+                HorizontalOptions="Fill"
+                Text="{Binding 客製化使用者對話窗ViewModel.對話窗使用者帳號}"
+                TextColor="Black"
+                />
+            <Label Text="密碼" />
+            <Entry
+                HorizontalOptions="Fill"
+                Text="{Binding 客製化使用者對話窗ViewModel.對話窗使使用者密碼}"
+                IsPassword="True"
+                TextColor="Black"
+                />
+            <StackLayout
+                Orientation="Horizontal"
+                HorizontalOptions="Center"
+                >
+                <Button
+                    Text="確定"
+                    Command="{Binding 客製化對話窗確定Command}"
+                    />
+                <Button
+                    Text="取消"
+                    Command="{Binding 客製化對話窗取消Command}"
+                    />
+            </StackLayout>
+        </StackLayout>
+    </Grid>
+
+</ContentView>

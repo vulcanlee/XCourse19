@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF5004.Views.MainPage"
+             xmlns:UserControls="clr-namespace:XF5004.UserControls"
+             BackgroundColor="#ffaa80"
+             Title="使用者自訂對話窗與PopUp應用">
+
+    <!--兩種自動控制項開發練習
+    在這個專案中，您將會設計兩種使用者控制項，這兩種控制項在一般應用程式開發中，會經常用到，
+    第一個為需要使用者輸入帳號與密碼的彈出對話窗、第二個則是正在處理中的對話窗，
+    這兩個對話窗都具有遮罩的效果-->
+
+    <Grid>
+        <StackLayout
+            Spacing="30"
+            HorizontalOptions="Center" VerticalOptions="Center">
+
+            <Button Text="客製化對話窗"
+              Command="{Binding 客製化對話窗Command}"
+               />
+            <!--在這裡將會顯示使用者所輸入的帳號與密碼內容-->
+            <Label Text="{Binding 使用者輸入內容}"/>
+
+            <Button Text="處理中遮罩" 
+              Command="{Binding 處理中遮罩Command}"/>
+
+        </StackLayout>
+
+        <!--這是一個開發技巧，讓您的使用者控制項放在 Grid 版面配置內，使他與頁面內榮重疊
+        透過 IsVisible 的屬性控制這個使用者控制項是否要顯示出來。
+        當使用者控制顯示出來的時候，他就會顯示在最前面，而覆蓋掉頁面中的其他控制項
+        不過，因為有使用半透明遮罩，所以，不會完全覆蓋掉原始頁面-->
+        <UserControls:ProcessingUserControl 
+            IsVisible="{Binding 處理中ViewModel.顯示處理中遮罩}"
+            />
+        <UserControls:CustDialogUserControl 
+            IsVisible="{Binding 客製化使用者對話窗ViewModel.顯示客製化使用者對話窗}"
+            />
+    </Grid>
+</ContentPage>
