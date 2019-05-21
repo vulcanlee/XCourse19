@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF5001.Views.MainPage"
+             Title="使用 MediaPlugin 進行拍照">
+
+    <ScrollView
+        Orientation="Vertical"
+        >
+        <StackLayout BackgroundColor="#FFC000">
+            <Button
+                Text="拍照"
+                Command="{Binding TakePhotoCommand}"/>
+            <Label
+                Text="{Binding UploadImageUrl}"/>
+            <Button
+                Text="上傳"
+                Command="{Binding UploadPhotoCommand}"/>
+            <Image
+                HorizontalOptions="Center" VerticalOptions="Start"
+                WidthRequest="200" HeightRequest="200"
+                BackgroundColor="LightBlue"
+                Source="{Binding MyImageSource}" Aspect="AspectFit"/>
+            <Image
+                HorizontalOptions="Center" VerticalOptions="Start"
+                WidthRequest="200" HeightRequest="200"
+                BackgroundColor="LightGreen"
+                Source="{Binding UploadImageUrl}" Aspect="AspectFit"/>
+        </StackLayout>
+
+    </ScrollView>
+</ContentPage>
