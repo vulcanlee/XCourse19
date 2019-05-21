@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF5006.Views.MainPage"
+             Title="SQLite資料庫使用">
+
+    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+        <Label Text="Welcome to Xamarin Forms and Prism!" />
+        <Label
+            Text="{Binding Message}"
+            FontSize="28"
+            TextColor="Orange"/>
+    </StackLayout>
+
+</ContentPage>
