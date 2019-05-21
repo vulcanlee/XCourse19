@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="XF5002.Views.ScanningPage"
+             xmlns:Zxing="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms"
+             Title="進行條碼掃描中..."
+             >
+
+    <Grid
+        >
+        <Zxing:ZXingScannerView
+            HorizontalOptions="Fill"
+            IsAnalyzing="{Binding IsAnalyzing}"
+            IsScanning="{Binding IsScanning}"
+            Result="{Binding ScanResult, Mode=TwoWay}" 
+            ScanResultCommand="{Binding ScanResultCommand}"
+             />
+        <Zxing:ZXingDefaultOverlay Opacity="0.9" ShowFlashButton="False" />
+    </Grid>
+
+</ContentPage>
