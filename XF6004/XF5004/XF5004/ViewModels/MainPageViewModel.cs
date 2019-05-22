@@ -16,11 +16,11 @@ namespace XF5004.ViewModels
     public class MainPageViewModel : INotifyPropertyChanged, INavigationAware
     {
         public event PropertyChangedEventHandler PropertyChanged;
-        public DelegateCommand 客製化對話窗Command { get; set; }
-        public DelegateCommand 處理中遮罩Command { get; set; }
-        public DelegateCommand 點選遮罩Command { get; set; }
-        public DelegateCommand 客製化對話窗確定Command { get; set; }
-        public DelegateCommand 客製化對話窗取消Command { get; set; }
+        public DelegateCommand 客製化對話窗Command;
+        public DelegateCommand 處理中遮罩Comnand;
+        public DelegateCommand 點選遮罩Command;
+        public DelegateCommand 客製化對話窗確定Command;
+        public DelegateCommand 客製化對話窗取消Command;
         public bool 顯示客製化對話窗 { get; set; }
         public string 對話窗主題 { get; set; }
         public string 對話窗內容 { get; set; }
@@ -35,7 +35,7 @@ namespace XF5004.ViewModels
             this.navigationService = navigationService;
             this.dialogService = dialogService;
             客製化對話窗Command = new DelegateCommand(客製化對話窗);
-            處理中遮罩Command = new DelegateCommand(處理中遮罩);
+            處理中遮罩Comnand = new DelegateCommand(處理中遮罩);
             點選遮罩Command = new DelegateCommand(點選遮罩);
             客製化對話窗確定Command = new DelegateCommand(客製化對話窗確定);
             客製化對話窗取消Command = new DelegateCommand(客製化對話窗取消);
