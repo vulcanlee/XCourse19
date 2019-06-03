@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF5007.Views.MainPage"
+             Title="背景執行緒與背景模式">
+
+    <ScrollView
+        Orientation="Both"
+        >
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+            <Label Text="Welcome to Xamarin Forms and Prism!" />
+            <Label Text="{Binding AppLifeStatusRecord}"
+               FontSize="{OnPlatform 14, iOS=14}">
+            </Label>
+
+            <Label
+            Text="{Binding Counter}"
+            FontSize="30"
+            TextColor="Red"/>
+            <Button
+            Text="開始定時執行"
+            Command="{Binding StartCommand}"/>
+            <StackLayout
+            Orientation="Horizontal"
+            >
+                <Button Text="Read" Command="{Binding ReadCommand}"/>
+                <Button Text="Reset" Command="{Binding ResetCommand}"/>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
