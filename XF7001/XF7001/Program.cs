@@ -36,7 +36,7 @@ namespace XF7001
             helloDelegate.Invoke("Vulcan");
 
             // 指定委派物件到一個靜態方法(函式特徵需要相同)
-            helloDelegate = MyClass.SayHelloStatic;
+            helloDelegate = new HelloDelegate(MyClass.SayHelloStatic);
             // 直接執行該委派物件上指定的靜態方法，
             // 也就是呼叫 MyClass.SayHelloStatic
             helloDelegate("Ada");
