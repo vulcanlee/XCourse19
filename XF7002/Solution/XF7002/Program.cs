@@ -58,6 +58,7 @@ namespace XF7002
     {
         static void Main(string[] args)
         {
+            Action foo;
             // 建立專案團隊物件與相關開發人員
             ProjectTeam projectTeam = new ProjectTeam()
             {
