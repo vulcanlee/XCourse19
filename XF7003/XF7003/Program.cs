@@ -41,7 +41,7 @@ namespace XF7003
             }
             // 解除訂閱事件
             c.ThresholdReached -= c_ThresholdReached;
-            // 不能在此使用這樣語法清空訂閱事件
+            // 不能在此使用這樣語法來訂閱或清空訂閱事件
             //c.ThresholdReached = null;
             Console.WriteLine("Press any key for continuing...");
             Console.ReadKey();

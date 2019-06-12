@@ -20,9 +20,12 @@ namespace XF7004
             Items.Add($"{name} 得到分數 {score}");
             if(score<0 || score>100)
             {
-                AbnormalEventHandler?.Invoke(this,
-                    new GradeSheetEventArgs() { Name = name, Score = score });
+                OnAbnormal(new GradeSheetEventArgs() { Name = name, Score = score });
             }
+        }
+        private void OnAbnormal(GradeSheetEventArgs gradeSheetEventArgs )
+        {
+            AbnormalEventHandler?.Invoke(this, gradeSheetEventArgs);
         }
     }
     class Program
