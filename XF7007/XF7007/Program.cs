@@ -18,6 +18,7 @@ namespace XF7007
         private readonly ConsoleWriter consoleWriter;
         public MyClass()
         {
+            // 此會造成 MyClass 與 ConsoleWriter 有緊密耦合關係
             consoleWriter = new ConsoleWriter();
         }
         public void DoSomething()
