@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29001.49
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XF7010", "XF7010\XF7010.csproj", "{7F803399-4DF4-4AE0-89B8-8C19648F225F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7F803399-4DF4-4AE0-89B8-8C19648F225F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F803399-4DF4-4AE0-89B8-8C19648F225F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F803399-4DF4-4AE0-89B8-8C19648F225F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F803399-4DF4-4AE0-89B8-8C19648F225F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5480A6AF-94F3-4F4D-B391-82A30D9395A6}
+	EndGlobalSection
+EndGlobal
