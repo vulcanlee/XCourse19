@@ -14,10 +14,13 @@ namespace XF7008
         string department;
         public void Display()
         {
-            Console.WriteLine($"{name}/{age}/{grade}/{department}");
+            Console.WriteLine($"{name}/{age}/" +
+                $"{grade}/{department}");
         }
-        public void Init(string name, int age, int grade, string department)
+        public void Init(string name, int age,
+            int grade, string department)
         {
+            // 可以在此作初始資料正確性檢查
             this.name = name;
             this.age = age;
             this.grade = grade;

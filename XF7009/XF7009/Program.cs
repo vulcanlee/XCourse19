@@ -13,7 +13,11 @@ namespace XF7009
         public string Name
         {
             get { return name; }
-            set { if (!string.IsNullOrEmpty(value)) name = value; }
+            set
+            {
+                if (!string.IsNullOrEmpty(value))
+                    name = value;
+            }
         }
         private int age;
 
@@ -35,7 +39,11 @@ namespace XF7009
         public string Department
         {
             get { return department; }
-            set { if (!string.IsNullOrEmpty(value)) department = value; }
+            set
+            {
+                if (!string.IsNullOrEmpty(value))
+                    department = value;
+            }
         }
         public Student(string name, int age,
             int grade, string department)
