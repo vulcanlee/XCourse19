@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF6005.Views.MainPage"
+             Title="除錯練習：螢幕一片空白">
+
+    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+        <Label Text="Welcome to Xamarin Forms and Prism!" />
+        <Entry Text="{Binding Account}"/>
+        <Entry Text="{Binding Password}"/>
+        <Button Text="Login" Command="{Binding LoginCommand}"/>
+    </StackLayout>
+
+</ContentPage>
