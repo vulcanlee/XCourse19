@@ -4,31 +4,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace XF7011
+namespace XF7012
 {
-    delegate void MyActionDelegate(string message);
+    delegate int MyFuncDelegate(string message);
     class MyActionClass
     {
-        // 使用 Action 宣告一個委派變數
-        Action<string> MyActionHandler;
+        // 使用 Func 宣告一個委派變數
+        Func<string, int> MyFuncHandler;
         // 使用 delegate 自訂型別來宣告一個委派變數
-        MyActionDelegate MyDelegateHandler;
+        MyFuncDelegate MyDelegateHandler;
         public MyActionClass()
         {
-            MyActionHandler = this.MyInstanceMethod;
-            MyActionHandler = MyActionClass.MyStaticMethod;
+            MyFuncHandler = this.MyInstanceMethod;
+            MyFuncHandler = MyActionClass.MyStaticMethod;
             MyDelegateHandler = this.MyInstanceMethod;
             MyDelegateHandler = MyActionClass.MyStaticMethod;
         }
         // 執行個體方法
-        public void MyInstanceMethod(string message)
+        public int MyInstanceMethod(string message)
         {
-            Console.WriteLine(message);
+            return message.Length;
         }
         // 靜態方法
-        public static void MyStaticMethod(string message)
+        public static int MyStaticMethod(string message)
         {
-            Console.WriteLine(message);
+            return message.Length;
         }
     }
     class Program
