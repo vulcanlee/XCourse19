@@ -17,14 +17,14 @@ namespace XF7018
             Console.WriteLine($"主執行緒({Thread.CurrentThread.ManagedThreadId})繼續執行");
             Console.WriteLine($"主執行緒休息 3 秒鐘");
             int result = computeStringLengthHandler.EndInvoke(asyncResult);
-            Console.WriteLine($"非同步委派方法執行結果執行緒({Thread.CurrentThread.ManagedThreadId}):{result}");
+            Console.WriteLine($"非同步委派方法執行結果(執行緒 {Thread.CurrentThread.ManagedThreadId}):{result}");
 
             Console.WriteLine("Press any key for continuing...");
             Console.ReadKey();
         }
         static int SimulateComputeLength(string str)
         {
-            Console.WriteLine($"的執行緒:{Thread.CurrentThread.ManagedThreadId}");
+            Console.WriteLine($"非同步執行的執行緒:{Thread.CurrentThread.ManagedThreadId}");
             Thread.Sleep(2000);
             return str.Length;
         }
