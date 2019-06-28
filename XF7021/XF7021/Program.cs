@@ -10,6 +10,11 @@ namespace XF7021
     {
         public Action<string> MyHandler;
         public event Action<string> MyEventHandler;
+        public void ListEventMethod()
+        {
+            // 對於 event 僅能夠在定義的類別內列出委派方法清單
+            Console.WriteLine($"事件方法數量 {MyEventHandler.GetInvocationList().Count()}");
+        }
     }
     class Program
     {
